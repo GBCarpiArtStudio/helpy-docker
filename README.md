@@ -18,6 +18,7 @@ This image expects a number of environment variables to be set to properly run:
 - `POSTGRES_DB` should be set to the name of your database
 - `POSTGRES_USER` should be set to the name of your database user
 - `POSTGRES_PASSWORD` should be set to the password for your database user
+- `POSTGRES_PASSWORD_FILE` file instead of enviroment variable (useful for docker secrets)
 - `SECRET_KEY_BASE` should be set to a long, random string (used to sign and verify cookies)
 
 You may also set `DO_NOT_PREPARE=true` to skip database migrations. It is advised to leave this alone to ensure database migrations run on version change.
