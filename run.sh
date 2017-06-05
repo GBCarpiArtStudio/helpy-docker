@@ -11,7 +11,7 @@ if [[ "${RUN_PREPARE}" = "false" ]]; then
 fi
 
 if [ -f "${POSTGRES_PASSWORD_FILE}" ]; then
-  sed -i "s|<%= ENV['POSTGRES_PASSWORD'] %>|$(cat ${POSTGRES_PASSWORD_FILE})|" ${HELPY_HOME}/config/database.yml
+  sed -i "s|<%= ENV\['POSTGRES_PASSWORD'\] %>|$(cat ${POSTGRES_PASSWORD_FILE})|" ${HELPY_HOME}/config/database.yml
 fi
 
 echo "---> Starting Helpy.io server (unicorn)..."
